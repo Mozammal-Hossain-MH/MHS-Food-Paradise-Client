@@ -11,7 +11,7 @@ const Navbar = () => {
         <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Our Shop</NavLink>
     </>
     return (
-        <div className="navbar bg-black text-white fixed z-10 bg-opacity-30 max-w-screen-xl mb-10">
+        <div className="navbar bg-black text-white fixed z-10 bg-opacity-30 mb-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
