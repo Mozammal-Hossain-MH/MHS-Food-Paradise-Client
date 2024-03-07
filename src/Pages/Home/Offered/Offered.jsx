@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import OfferItem from "../../Shared/OfferItem/OfferItem";
+import useMenu from "../../../Hooks/useMenu";
 
 
 const Offered = () => {
-    const [offerItems, setOfferItems] = useState([]);
+    const [menu] = useMenu();
+    const offerItems = menu.filter(item => item.category === 'offered')
 
-    useEffect(() => {
-        fetch('/menu.json')
-            .then(res => res.json())
-            .then(data => {
-                const offered = data.filter(item => item.category === 'offered');
-                setOfferItems(offered);
-            })
-    }, [])
-    console.log(offerItems)
     return (
         <section className="mx-3">
             <div className="mb-10">

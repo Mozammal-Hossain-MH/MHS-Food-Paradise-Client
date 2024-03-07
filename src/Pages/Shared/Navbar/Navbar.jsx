@@ -4,12 +4,24 @@ import './Navbar.css'
 
 const Navbar = () => {
     const navOptions = <>
-        <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Home</NavLink>
-        <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/contact-us'}>Contact Us</NavLink>
-        <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Dashboard</NavLink>
-        <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Our Menu</NavLink>
-        <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Our Shop</NavLink>
+        <li>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Home</NavLink>
+        </li>
+        <li>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/contact-us'}>Contact Us</NavLink>
+        </li>
+        <li>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Dashboard</NavLink>
+        </li>
+        <li>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/menu'}>Our Menu</NavLink>
+        </li>
+        <li>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/shop'}>Our Shop</NavLink>
+        </li>
     </>
+
+    
     return (
         <div className="navbar bg-black text-white fixed z-10 bg-opacity-30 mb-10">
             <div className="navbar-start">

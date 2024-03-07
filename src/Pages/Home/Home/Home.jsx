@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Footer from "../../Shared/Footer";
 import Banner from "../Banner/Banner";
 import ChefService from "../ChefService/ChefService";
@@ -12,6 +13,9 @@ import Testimonials from "../Testimonials/Testimonials";
 const Home = () => {
     return (
         <div className="space-y-24">
+            <Helmet>
+                <title>MHS | Home</title>
+            </Helmet>
             <Banner></Banner>
             <div className="max-w-screen-xl mx-auto space-y-24">
                 <FoodCategory></FoodCategory>
