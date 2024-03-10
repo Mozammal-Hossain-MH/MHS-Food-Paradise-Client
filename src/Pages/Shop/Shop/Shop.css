@@ -1,0 +1,10 @@
+
+.react-tabs__tab--selected{
+    border: 0;
+    border-radius: 0px;
+    border-top: 4px solid #BB8506;
+    color: #BB8506;
+}
+.react-tabs__tab--selected:focus{
+    border-bottom: #BB8506;
+}

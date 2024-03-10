@@ -11,13 +11,13 @@ const Navbar = () => {
             <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/contact-us'}>Contact Us</NavLink>
         </li>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Dashboard</NavLink>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/dashboard'}>Dashboard</NavLink>
         </li>
         <li>
             <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/menu'}>Our Menu</NavLink>
         </li>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/shop'}>Our Shop</NavLink>
+            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/shop/salad'}>Our Shop</NavLink>
         </li>
     </>
 

@@ -47,7 +47,7 @@ const Menu = () => {
                 >
                 </Cover>
                 <div className='mx-3'>
-                    <MenuCategory items={desserts}></MenuCategory>
+                    <MenuCategory items={desserts} title={'dessert'}></MenuCategory>
                 </div>
                 <Cover
                     bgImg={pizzaImg}
@@ -56,7 +56,7 @@ const Menu = () => {
                 >
                 </Cover>
                 <div className='mx-3'>
-                    <MenuCategory items={pizzas}></MenuCategory>
+                    <MenuCategory items={pizzas} title={'pizza'}></MenuCategory>
                 </div>
                 <Cover
                     bgImg={saladImg}
@@ -65,7 +65,7 @@ const Menu = () => {
                 >
                 </Cover>
                 <div className='mx-3'>
-                    <MenuCategory items={salads}></MenuCategory>
+                    <MenuCategory items={salads} title={'salad'}></MenuCategory>
                 </div>
                 <Cover
                     bgImg={soupImg}
@@ -74,7 +74,7 @@ const Menu = () => {
                 >
                 </Cover>
                 <div className='mx-3'>
-                    <MenuCategory items={soups}></MenuCategory>
+                    <MenuCategory items={soups} title={'soup'}></MenuCategory>
                 </div>
             </div>
             <Footer></Footer>
