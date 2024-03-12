@@ -1,27 +1,85 @@
 import { NavLink } from "react-router-dom";
 import './Navbar.css'
+import { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import pfp from '../../../assets/others/profile.png';
+import { IoMdCart } from "react-icons/io";
+import Swal from "sweetalert2";
+
 
 
 const Navbar = () => {
+    const { user, logout } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "Choosing logout will logged you out!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Logout"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                logout()
+                    .then(() => {
+                        Swal.fire({
+                            title: "Logged out!",
+                            text: "You have successfully logged out.",
+                            icon: "success"
+                        });
+                    })
+
+            }
+        });
+
+
+    }
+
     const navOptions = <>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Home</NavLink>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/'}>Home</NavLink>
         </li>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/contact-us'}>Contact Us</NavLink>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/contact-us'}>Contact Us</NavLink>
         </li>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/dashboard'}>Dashboard</NavLink>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/dashboard'}>Dashboard</NavLink>
         </li>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/menu'}>Our Menu</NavLink>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/menu'}>Our Menu</NavLink>
         </li>
         <li>
-            <NavLink className={'mr-2 font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/shop/salad'}>Our Shop</NavLink>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/shop/salad'}>Our Shop</NavLink>
+        </li>
+        <li>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95 relative'} to={'/'}>
+                <IoMdCart className="w-9 h-9 " /> <span className="bg-red-600 text-[8px] px-2 rounded-full absolute bottom-0 right-0">+0</span>
+            </NavLink>
+        </li>
+        {
+            user ? <li>
+                <button onClick={handleLogout} className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'}>Logout</button>
+            </li>
+                : <>
+                    <li>
+                        <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/login'}>Login</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/sign-up'}>Sign up</NavLink>
+                    </li>
+                </>
+        }
+        <li className="flex">
+            <img className={`ml-3 w-7 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : pfp} />
+        </li>
+        <li>
+            <p>{user?.displayName}</p>
         </li>
     </>
 
-    
+
     return (
         <div className="navbar bg-black text-white fixed z-10 bg-opacity-30 mb-10">
             <div className="navbar-start">
@@ -36,7 +94,7 @@ const Navbar = () => {
                 <a className="btn btn-ghost text-xl font-extrabold">MHS</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal items-center">
                     {navOptions}
                 </ul>
             </div>
