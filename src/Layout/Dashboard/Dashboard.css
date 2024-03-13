@@ -1,0 +1,7 @@
+.width {
+    width: calc(100% - 190px);
+}
+
+.body-trans {
+    transition: width ease-in 0.15s;
+}

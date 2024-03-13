@@ -5,11 +5,13 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import pfp from '../../../assets/others/profile.png';
 import { IoMdCart } from "react-icons/io";
 import Swal from "sweetalert2";
+import useCart from "../../../Hooks/useCart";
 
 
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
+    const [cart] = useCart();
 
     const handleLogout = () => {
         Swal.fire({
@@ -54,8 +56,8 @@ const Navbar = () => {
             <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/shop/salad'}>Our Shop</NavLink>
         </li>
         <li>
-            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95 relative'} to={'/'}>
-                <IoMdCart className="w-9 h-9 " /> <span className="bg-red-600 text-[8px] px-2 rounded-full absolute bottom-0 right-0">+0</span>
+            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95 relative'} to={'/dashboard/cart'}>
+                <IoMdCart className="w-9 h-9 " /> <span className="bg-red-600 text-[8px] px-2 rounded-full absolute bottom-0 right-0">{cart.length}</span>
             </NavLink>
         </li>
         {
