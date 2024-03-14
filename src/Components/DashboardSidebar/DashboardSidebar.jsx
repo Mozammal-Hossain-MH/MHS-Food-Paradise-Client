@@ -8,10 +8,12 @@ import { FcBusinessContact } from "react-icons/fc";
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import { ImSpoonKnife } from "react-icons/im";
 import { TfiMenuAlt } from "react-icons/tfi";
+import useAdmin from "../../Hooks/useAdmin";
 
 const DashboardSidebar = ({ sidebar, setSidebar }) => {
     // TODO: verify admin or not from database
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
+    console.log(isAdmin)
 
     return (
         <div className="relative">

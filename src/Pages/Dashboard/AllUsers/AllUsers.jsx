@@ -4,16 +4,15 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { FaTrashAlt, FaUsers } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
-import { getAuth } from "firebase/auth";
+import useAuthContext from "../../../Hooks/useAuthContext";
 
 
 const AllUsers = () => {
     const axiosSecure = useAxiosSecure();
-    const auth = getAuth()
-    console.log(auth)
+    const {user} = useAuthContext();
 
     const { data: users = [], refetch } = useQuery({
-        queryKey: ['users'],
+        queryKey: ['users', user?.email],
         queryFn: async () => {
             const res = await axiosSecure.get('/users');
             return res.data;
@@ -21,19 +20,32 @@ const AllUsers = () => {
     })
 
     const handleMakeAdmin = user => {
-        axiosSecure.patch(`/users/admin/${user._id}`)
-            .then(res => {
-                if (res.data.modifiedCount === 1) {
-                    Swal.fire({
-                        title: "Success!",
-                        text: `${user.name} is now an admin`,
-                        icon: "success",
-                        showConfirmButton: false
-                    });
-                    refetch();
-                }
-            })
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axiosSecure.patch(`/users/admin/${user._id}`)
+                    .then(res => {
+                        if (res.data.modifiedCount === 1) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: `${user.name} is now an admin`,
+                                icon: "success",
+                                showConfirmButton: false
+                            });
+                            refetch();
+                        }
+                    })
+            }
+        })
     }
+
 
     const handleDeleteUser = user => {
         console.log(user)
