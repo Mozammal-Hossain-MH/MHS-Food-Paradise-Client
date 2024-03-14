@@ -10,17 +10,20 @@ import { useEffect, useState } from "react";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { FaQuoteLeft } from "react-icons/fa";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
 
 
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
+    const axiosPublic = useAxiosPublic();
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
-            .then(res => res.json())
-            .then(data => setReviews(data));
-    }, [])
+        axiosPublic.get('/reviews')
+            .then(res => {
+                setReviews(res.data);
+            })
+    }, [axiosPublic])
 
     return (
         <section>
@@ -53,7 +56,7 @@ const Testimonials = () => {
                                     value={review.rating}
                                     readOnly
                                 />
-                                <FaQuoteLeft className="w-20 h-20"/>
+                                <FaQuoteLeft className="w-20 h-20" />
                                 <p>{review.details}</p>
                                 <h3 className="text-[#CD9003] font-medium text-3xl">{review.name}</h3>
                             </div>

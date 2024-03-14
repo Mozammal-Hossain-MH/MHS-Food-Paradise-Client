@@ -4,11 +4,9 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import fb from '../../assets/icon/fb.png';
-import gg from '../../assets/icon/gg.png';
-import gh from '../../assets/icon/gh.png';
 import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
+import SocialLogin from '../../Components/SocialLogin/SocialLogin';
 
 const Login = () => {
     const [disabled, setDisabled] = useState(true);
@@ -33,6 +31,13 @@ const Login = () => {
             toast.success('You have successfully logged in')
             navigate(path ? path : '/');
             e.target.reset();
+        })
+        .catch(error => {
+            console.log(error.message);
+            if(error.message === 'Firebase: Error (auth/invalid-credential).'){
+               toast.error('Create an account before logging in again') 
+            }
+            
         })
     }
 
@@ -84,9 +89,7 @@ const Login = () => {
                         <p className='text-[#D1A054]'><small>New here? <Link to={'/sign-up'} className='link link-hover font-bold'>Create New Account</Link></small></p>
                         <p className='font-medium'>Or sign in with</p>
                         <div className='flex justify-center'>
-                            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={fb} />
-                            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={gg} />
-                            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={gh} />
+                            <SocialLogin></SocialLogin>
                         </div>
                     </div>
                 </div>

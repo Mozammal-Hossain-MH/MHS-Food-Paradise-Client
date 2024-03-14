@@ -74,7 +74,7 @@ const Navbar = () => {
                 </>
         }
         <li className="flex">
-            <img className={`ml-3 w-7 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : pfp} />
+            <img className={`ml-3 w-7 h-7 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : pfp} />
         </li>
         <li>
             <p>{user?.displayName}</p>

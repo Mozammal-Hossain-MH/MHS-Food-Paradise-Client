@@ -1,6 +1,7 @@
-import SectionTitle from "../../Components/SectionTitle/SectionTitle";
-import useCart from "../../Hooks/useCart";
-import Table from "../Shared/Table/Table";
+import { Helmet } from "react-helmet-async";
+import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
+import useCart from "../../../Hooks/useCart";
+import Table from "../../Shared/Table/Table";
 
 
 const Cart = () => {
@@ -9,6 +10,9 @@ const Cart = () => {
     const totalPrice = cart.reduce((total, item) => total + item.price, 0)
     return (
         <div className="mx-4 xl:mx-36 my-10 space-y-10">
+            <Helmet>
+                <title>MHS | Cart</title>
+            </Helmet>
             <div>
                 <SectionTitle
                     heading={'My Cart'}

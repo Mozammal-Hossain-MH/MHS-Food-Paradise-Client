@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 const PrivateRoute = ({children}) => {
@@ -16,7 +17,10 @@ const PrivateRoute = ({children}) => {
     if(user){
         return children;
     }
-    return <Navigate to={'/login'} state={{from: location}} replace></Navigate>
+    return <>
+    <Navigate to={'/login'} state={{from: location}} replace></Navigate>
+    {toast.error("Please login to access this")}
+    </>
 };
 
 export default PrivateRoute;

@@ -1,20 +1,20 @@
 import '../Login/Login.css'
 import loginImg from '../../assets/others/authentication2.png';
 import { Link, useNavigate } from 'react-router-dom';
-import fb from '../../assets/icon/fb.png';
-import gg from '../../assets/icon/gg.png';
-import gh from '../../assets/icon/gh.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 // import toast from 'react-hot-toast';
 import { useForm } from "react-hook-form"
 import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
+import useAxiosPublic from '../../Hooks/useAxiosPublic';
+import SocialLogin from '../../Components/SocialLogin/SocialLogin';
 
 
 const SignUp = () => {
     const { createUser, updateUsersProfile } = useContext(AuthContext);
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
     const {
         register,
         handleSubmit,
@@ -29,10 +29,22 @@ const SignUp = () => {
                 console.log(result.user);
                 updateUsersProfile(data.name)
                     .then(() => {
+                        const user = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', user)
+                            .then(res => {
+                                console.log(res.data)
+                                if (res.data.insertedId) {
+                                    toast.success('Account created successfully');
+                                    navigate('/');
+                                    reset();
+                                }
+                            })
+
                     })
-                    toast.success('Account created successfully');
-                navigate('/');
-                reset();
+
             })
             .catch(error => {
                 console.log(error)
@@ -107,9 +119,7 @@ const SignUp = () => {
                             <p className='text-[#D1A054]'><small>Already registered? <Link to={'/login'} className='link link-hover font-bold'>Go To Login</Link></small></p>
                             <p className='font-medium'>Or sign up with</p>
                             <div className='flex justify-center'>
-                                <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={fb} />
-                                <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={gg} />
-                                <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={gh} />
+                                <SocialLogin></SocialLogin>
                             </div>
                         </div>
                     </div>
