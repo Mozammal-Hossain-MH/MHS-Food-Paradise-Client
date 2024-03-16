@@ -1,29 +1,26 @@
 import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-import useCart from "../../../Hooks/useCart";
+import useMenu from "../../../Hooks/useMenu";
 import Table from "../../Shared/Table/Table";
 
 
-const Cart = () => {
-    const [cart, refetch] = useCart();
-    
-    const totalPrice = cart.reduce((total, item) => total + item.price, 0)
+const ManageItems = () => {
+    const [menu,,refetch] = useMenu();
+
     return (
         <div className="mx-4 xl:mx-36 my-10 space-y-10">
             <Helmet>
-                <title>MHS | Cart</title>
+                <title>MHS | Manage Items</title>
             </Helmet>
             <div>
                 <SectionTitle
-                    heading={'My Cart'}
-                    subHeading={'WANNA ADD MORE?'}
+                    heading={'Hurry Up'}
+                    subHeading={'MANAGE ALL ITEMS'}
                 ></SectionTitle>
             </div>
             <div className="bg-[#fff] p-3 md:p-12 space-y-10">
-                <div className="font-cinzel flex justify-between items-center font-bold">
-                    <h3 className="text-lg lg:text-3xl">Total Orders: {cart.length}</h3>
-                    <h3 className="text-lg lg:text-3xl">Total Price: ${totalPrice.toFixed(2)}</h3>
-                    <button className="btn btn-sm bg-[#D1A054]  text-white">Pay</button>
+                <div className="font-cinzel font-bold">
+                    <h3 className="text-lg lg:text-3xl">Total Items: {menu.length}</h3>
                 </div>
                 <div>
                     <div className="overflow-x-auto">
@@ -36,16 +33,18 @@ const Cart = () => {
                                     <th>Item Name</th>
                                     <th>Price</th>
                                     <th>Action</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
-                                    cart.map((item, index) => <Table
+                                    menu.map((item, index) => <Table 
                                         key={item._id}
                                         item={item}
+                                        manageItem={true}
                                         serial={index + 1}
                                         refetch={refetch}
-                                    ></Table>)
+                                        ></Table>)
                                 }
                             </tbody>
 
@@ -57,4 +56,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default ManageItems;

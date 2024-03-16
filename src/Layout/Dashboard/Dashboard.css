@@ -1,7 +1,9 @@
-.width {
-    width: calc(100% - 200px);
-}
+@media (min-width: 864px) {
+    .width {
+        width: calc(100% - 200px);
+    }
 
-.body-trans {
-    transition: width ease-in 0.15s;
+    .body-trans {
+        transition: width ease-in 0.15s;
+    }
 }

@@ -27,7 +27,7 @@ const AllUsers = () => {
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: "Yes, make admin!"
         }).then((result) => {
             if (result.isConfirmed) {
                 axiosSecure.patch(`/users/admin/${user._id}`)

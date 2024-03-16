@@ -13,7 +13,6 @@ import useAdmin from "../../Hooks/useAdmin";
 const DashboardSidebar = ({ sidebar, setSidebar }) => {
     // TODO: verify admin or not from database
     const [isAdmin] = useAdmin();
-    console.log(isAdmin)
 
     return (
         <div className="relative">
@@ -25,26 +24,37 @@ const DashboardSidebar = ({ sidebar, setSidebar }) => {
                 <ul className="mt-16 space-y-2 menu">
                     {
                         isAdmin ? <>
-                            <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
-                                <FaHome className="mr-2"></FaHome>
-                                Admin Home
-                            </NavLink>
-                            <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
-                            <ImSpoonKnife className="mr-2"/>
-                                Add Items
-                            </NavLink>
-                            <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
-                            <TfiMenuAlt className="mr-2"/>
-                                Manage Items
-                            </NavLink>
-                            <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
-                                <FaBook className="mr-2"></FaBook>
-                                Manage Bookings
-                            </NavLink>
-                            <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/users'}>
-                                <FaUsers className="mr-2"></FaUsers>
-                                All Users
-                            </NavLink>
+                            <li>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <FaHome className="mr-2"></FaHome>
+                                    Admin Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/add-items'}>
+                                    <ImSpoonKnife className="mr-2" />
+                                    Add Items
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/manage-items'}>
+                                    <TfiMenuAlt className="mr-2" />
+                                    Manage Items
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <FaBook className="mr-2"></FaBook>
+                                    Manage Bookings
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/users'}>
+                                    <FaUsers className="mr-2"></FaUsers>
+                                    All Users
+                                </NavLink>
+                            </li>
+
                         </> :
                             <>
                                 <li>

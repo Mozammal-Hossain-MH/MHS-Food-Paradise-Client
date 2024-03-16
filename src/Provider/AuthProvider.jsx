@@ -43,18 +43,19 @@ const AuthProvider = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             console.log('current user:', currentUser)
             setUser(currentUser);
+
             if (currentUser) {
                 // get token and store client
-                const user = {email: currentUser.email};
+                const user = { email: currentUser.email };
                 axiosPublic.post('/jwt', user)
-                .then(res => {
-                    if(res.data.token){
-                        localStorage.setItem('access-token', res.data.token);
-                    }
-                })
+                    .then(res => {
+                        if (res.data.token) {
+                            localStorage.setItem('access-token', res.data.token);
+                        }
+                    })
             }
             else {
-                // TODO: Remove token if token stored in the client side(localstorage, caching, memory)
+                // DONE: Remove token if token stored in the client side(localstorage, caching, memory)
                 localStorage.removeItem('access-token');
             }
             setLoading(false);

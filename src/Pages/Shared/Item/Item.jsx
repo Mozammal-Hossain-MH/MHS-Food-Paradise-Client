@@ -25,7 +25,6 @@ const Item = ({ item }) => {
             }
             axiosSecure.post('/carts', cartItems)
             .then(res => {
-                console.log(res.data);
                 if(res.data.insertedId){
                     toast.success(`${name} added to your cart`);
                     // refetch cart to update the cart items count

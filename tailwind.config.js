@@ -11,6 +11,9 @@ export default {
       },
       boxShadow: {
         large: '10px 10px 10px 10px rgba(0, 0, 0, 0.25)'
+      },
+      backgroundImage: {
+        gradientButton: 'linear-gradient(90deg, #835D23 0%, #B58130 100%)'
       }
     },
   },
