@@ -2,11 +2,12 @@ import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import useCart from "../../../Hooks/useCart";
 import Table from "../../Shared/Table/Table";
+import { Link } from "react-router-dom";
 
 
 const Cart = () => {
     const [cart, refetch] = useCart();
-    
+
     const totalPrice = cart.reduce((total, item) => total + item.price, 0)
     return (
         <div className="mx-4 xl:mx-36 my-10 space-y-10">
@@ -23,7 +24,12 @@ const Cart = () => {
                 <div className="font-cinzel flex justify-between items-center font-bold">
                     <h3 className="text-lg lg:text-3xl">Total Orders: {cart.length}</h3>
                     <h3 className="text-lg lg:text-3xl">Total Price: ${totalPrice.toFixed(2)}</h3>
-                    <button className="btn btn-sm bg-[#D1A054]  text-white">Pay</button>
+                    {
+                        cart.length ?
+                            <Link to={'/dashboard/payment'}><button className="btn btn-sm bg-[#D1A054]  text-white">Pay</button></Link>
+                            :
+                            <button disabled className="btn btn-sm bg-[#D1A054]  text-white">Pay</button>
+                    }
                 </div>
                 <div>
                     <div className="overflow-x-auto">

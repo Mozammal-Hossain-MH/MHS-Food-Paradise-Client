@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
 import SocialLogin from '../../Components/SocialLogin/SocialLogin';
+import useCart from '../../Hooks/useCart';
 
 const Login = () => {
     const [disabled, setDisabled] = useState(true);
@@ -14,6 +15,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const path = location.state?.from?.pathname;
+    const [,refetch] = useCart();
 
     useEffect(() => {
         loadCaptchaEnginge(6);
@@ -30,6 +32,7 @@ const Login = () => {
             console.log(result.user);
             toast.success('You have successfully logged in')
             navigate(path ? path : '/');
+            refetch();
             e.target.reset();
         })
         .catch(error => {

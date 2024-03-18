@@ -27,10 +27,12 @@ const Navbar = () => {
                 logout()
                     .then(() => {
                         Swal.fire({
-                            title: "Logged out!",
-                            text: "You have successfully logged out.",
-                            icon: "success"
-                        });
+                            position: "center",
+                            icon: "success",
+                            title: "You have successfully logged out",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
                     })
 
             }

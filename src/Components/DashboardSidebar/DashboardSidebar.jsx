@@ -9,10 +9,12 @@ import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import { ImSpoonKnife } from "react-icons/im";
 import { TfiMenuAlt } from "react-icons/tfi";
 import useAdmin from "../../Hooks/useAdmin";
+import useCart from "../../Hooks/useCart";
 
 const DashboardSidebar = ({ sidebar, setSidebar }) => {
     // TODO: verify admin or not from database
     const [isAdmin] = useAdmin();
+    const [cart] = useCart();
 
     return (
         <div className="relative">
@@ -21,11 +23,11 @@ const DashboardSidebar = ({ sidebar, setSidebar }) => {
                     <h1 className="text-2xl font-bold leading-3">MHS</h1>
                     <p className="text-xl font-bold uppercase">restaurants</p>
                 </div>
-                <ul className="mt-16 space-y-2 menu">
+                <ul className={`${isAdmin ? 'mt-8' : 'mt-16'} space-y-2 menu`}>
                     {
                         isAdmin ? <>
                             <li>
-                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/admin-home'}>
                                     <FaHome className="mr-2"></FaHome>
                                     Admin Home
                                 </NavLink>
@@ -43,7 +45,7 @@ const DashboardSidebar = ({ sidebar, setSidebar }) => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/manage-bookings'}>
                                     <FaBook className="mr-2"></FaBook>
                                     Manage Bookings
                                 </NavLink>
@@ -58,19 +60,19 @@ const DashboardSidebar = ({ sidebar, setSidebar }) => {
                         </> :
                             <>
                                 <li>
-                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/user-home'}>
                                         <FaHome className="mr-2"></FaHome>
                                         User Home
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/reservation'}>
                                         <SlCalender className="mr-2"></SlCalender>
                                         Reservation
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/payment-history'}>
                                         <MdPayments className="mr-2" />
                                         payment history
                                     </NavLink>
@@ -78,17 +80,17 @@ const DashboardSidebar = ({ sidebar, setSidebar }) => {
                                 <li>
                                     <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/cart'}>
                                         <FaCartArrowDown className="mr-2"></FaCartArrowDown>
-                                        My cart
+                                        My cart ({cart.length})
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/add-review'}>
                                         <MdRateReview className="mr-2" />
                                         add review
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
+                                    <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/dashboard/my-booking'}>
                                         <FaAddressBook className="mr-2"></FaAddressBook>
                                         my booking
                                     </NavLink>
@@ -97,7 +99,7 @@ const DashboardSidebar = ({ sidebar, setSidebar }) => {
                     }
                 </ul>
                 {/* universal */}
-                <div className="border-b-2 my-6"></div>
+                <div className={`border-b-2 ${isAdmin ? 'my-2' : 'my-6'}`}></div>
                 <ul className="space-y-2 menu">
                     <li>
                         <NavLink className={'flex items-center uppercase px-2 py-1 rounded hover:bg-[#c19b61] hover:text-white transition duration-500 active:scale-90'} to={'/'}>
