@@ -3,13 +3,12 @@
 const PaymentTable = ({ payment }) => {
     const {transactionId, category, amount, date, status} = payment;
     const day = date.split('T')[0];
-    console.log(day);
     const time = date.split('T')[1].split('.')[0];
-    console.log(time)
+    
     return (
         <tr>
-            <td title="User Name" className="text-xs md:text-base">{transactionId}</td>
-            <td title="User Email" className="text-xs md:text-base">{category} </td>
+            <td title="Transaction Id" className="text-xs md:text-base">{transactionId}</td>
+            <td title="Category" className="text-xs md:text-base">{category} </td>
             <td className="text-xs md:text-base">{amount}</td>
             <th className="text-xs md:text-base font-normal">{day}</th>
             <th className="text-xs md:text-base font-normal">{time}</th>

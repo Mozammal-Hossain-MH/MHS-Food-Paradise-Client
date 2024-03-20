@@ -18,6 +18,9 @@ import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
 import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateItem";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+
 
 
 const router = createBrowserRouter([
@@ -53,6 +56,10 @@ const router = createBrowserRouter([
     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
+        path: 'user-home',
+        element: <UserHome></UserHome>
+      },
+      {
         path: 'cart',
         element: <Cart></Cart>
       },
@@ -66,6 +73,10 @@ const router = createBrowserRouter([
       },
 
       // admin routes
+      {
+        path: 'admin-home',
+        element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+      },
       {
         path: 'users',
         element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
@@ -81,7 +92,7 @@ const router = createBrowserRouter([
       {
         path: 'update-item/:id',
         element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+        loader: ({ params }) => fetch(`https://mhs-food-paradise-server.vercel.app/menu/${params.id}`)
       }
     ]
   }

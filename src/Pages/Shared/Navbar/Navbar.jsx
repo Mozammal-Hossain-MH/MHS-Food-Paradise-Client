@@ -6,12 +6,14 @@ import pfp from '../../../assets/others/profile.png';
 import { IoMdCart } from "react-icons/io";
 import Swal from "sweetalert2";
 import useCart from "../../../Hooks/useCart";
+import useAdmin from "../../../Hooks/useAdmin";
 
 
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const [cart] = useCart();
+    const [isAdmin] = useAdmin();
 
     const handleLogout = () => {
         Swal.fire({
@@ -32,7 +34,7 @@ const Navbar = () => {
                             title: "You have successfully logged out",
                             showConfirmButton: false,
                             timer: 1500
-                          });
+                        });
                     })
 
             }
@@ -48,9 +50,18 @@ const Navbar = () => {
         <li>
             <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/contact-us'}>Contact Us</NavLink>
         </li>
-        <li>
-            <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/dashboard'}>Dashboard</NavLink>
-        </li>
+        {
+            user && isAdmin &&
+            <li>
+                <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/dashboard/admin-home'}>Dashboard</NavLink>
+            </li>
+        }
+        {
+            user && isAdmin ||
+            <li>
+                <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/dashboard/user-home'}>Dashboard</NavLink>
+            </li>
+        }
         <li>
             <NavLink className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'} to={'/menu'}>Our Menu</NavLink>
         </li>

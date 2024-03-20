@@ -10,7 +10,7 @@ const Dashboard = () => {
 
     return (
         <div className="relative flex justify-end ">
-            <div className={`bg-[#D1A054] w-[200px] z-50 fixed left-0 h-screen font-cinzel py-12 ${!sidebar && '-translate-x-full'} transition`}>
+            <div className={`bg-[#D1A054] w-[200px] z-50 fixed left-0 h-screen font-cinzel py-6 ${!sidebar && '-translate-x-full'} transition`}>
                 <DashboardSidebar
                     sidebar={sidebar}
                     setSidebar={setSidebar}

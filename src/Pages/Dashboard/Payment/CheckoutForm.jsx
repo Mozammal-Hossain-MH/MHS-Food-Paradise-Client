@@ -79,7 +79,7 @@ const CheckoutForm = () => {
                 // now save the payment in the database
                 const paymentInfo = {
                     email: user.email,
-                    amount: totalPrice.toFixed(2),
+                    amount: parseFloat(totalPrice.toFixed(2)),
                     transactionId: paymentIntent.id,
                     date: new Date(), // utc date convert use moment.js
                     cartIds: cart.map(item => item._id),
