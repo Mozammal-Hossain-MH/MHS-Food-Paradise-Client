@@ -47,7 +47,7 @@ const ItemManagingForm = ({ handleSubmit, register, errors, onSubmit, useImg, up
                 <>
                     <label className="form-control w-full max-w-xs">
                         <div className="label">
-                            <span className="label-text font-bold" title="This field is required">Pick a file <span className="text-red-500">*</span></span>
+                            <span className="label-text font-bold" title="This field is required">Pick a file <span className="text-red-500">*</span>(370x247)</span>
                         </div>
                         <input type="file" {...register('image')} className="file-input file-input-bordered w-full max-w-xs" />
                     </label>
@@ -61,7 +61,7 @@ const ItemManagingForm = ({ handleSubmit, register, errors, onSubmit, useImg, up
                 <>
                     <label className="form-control w-full max-w-xs">
                         <div className="label">
-                            <span className="label-text font-bold" title="This field is required">Pick a file <span className="text-red-500">*</span></span>
+                            <span className="label-text font-bold" title="This field is required">Pick a file <span className="text-red-500">*</span>(370x247)</span>
                         </div>
                         <input type="file" {...register('image', { required: true })} className="file-input file-input-bordered w-full max-w-xs" />
                         {errors.image && <span className="text-red-500 text-xs mt-1">Image is required</span>}

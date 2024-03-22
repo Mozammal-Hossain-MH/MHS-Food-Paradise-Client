@@ -20,6 +20,9 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import ContactUs from "../Pages/ContactUs/ContactUs";
+import Reservation from "../Pages/Dashboard/Reservation/Reservation";
+import MyBookings from "../Pages/Dashboard/MyBookings/MyBookings";
 
 
 
@@ -32,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: 'contact-us',
+        element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>
       },
       {
         path: 'menu',
@@ -64,12 +71,20 @@ const router = createBrowserRouter([
         element: <Cart></Cart>
       },
       {
-        path: 'payment',
+        path: 'payment/:paymentPage',
         element: <Payment></Payment>
       },
       {
         path: 'payment-history',
         element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: 'reservation',
+        element: <Reservation></Reservation>
+      },
+      {
+        path: 'my-booking',
+        element: <MyBookings></MyBookings>
       },
 
       // admin routes
@@ -92,7 +107,7 @@ const router = createBrowserRouter([
       {
         path: 'update-item/:id',
         element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-        loader: ({ params }) => fetch(`https://mhs-food-paradise-server.vercel.app/menu/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
       }
     ]
   }

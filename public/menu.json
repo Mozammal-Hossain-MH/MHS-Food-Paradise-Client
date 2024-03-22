@@ -1,6 +1,8 @@
 [
     {
-        "_id": "642c155b2c4774f05c36eeaa",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeaa"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -8,7 +10,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36eeb9",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb9"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -16,7 +20,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee7c",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee7c"
+        },
         "name": "Escalope de Veau",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-5-370x247.jpg",
@@ -24,7 +30,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee88",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee88"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -32,7 +40,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee7a",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee7a"
+        },
         "name": "Roast Duck Breast",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-5-370x247.jpg",
@@ -40,7 +50,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8c",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee8c"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -48,7 +60,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee94",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee94"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -56,7 +70,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee9e",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee9e"
+        },
         "name": "Breton Fish Stew",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -64,7 +80,9 @@
         "price": 12.9
     },
     {
-        "_id": "642c155b2c4774f05c36eea6",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea6"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -72,7 +90,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeaf",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeaf"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -80,7 +100,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee89",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee89"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -88,7 +110,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8a",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee8a"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -96,7 +120,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee96",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee96"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -104,7 +130,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee81",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee81"
+        },
         "name": "Tuna Niçoise",
         "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -112,7 +140,9 @@
         "price": 10.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee84",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee84"
+        },
         "name": "Roast Duck Breast",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-4-370x247.jpg",
@@ -120,7 +150,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea4",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea4"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -128,7 +160,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea5",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea5"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -136,7 +170,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee87",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee87"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -144,7 +180,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee83",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee83"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -152,7 +190,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee7f",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee7f"
+        },
         "name": "Roasted Pork Belly",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -160,7 +200,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea8",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea8"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -168,7 +210,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeba",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeba"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -176,7 +220,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee80",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee80"
+        },
         "name": "Roast Duck Breast",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-4-370x247.jpg",
@@ -184,7 +230,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee90",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee90"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -192,7 +240,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb0",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb0"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -200,7 +250,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8d",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee8d"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -208,7 +260,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8e",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee8e"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -216,7 +270,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea7",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea7"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -224,7 +280,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee99",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee99"
+        },
         "name": "Goats Cheese Pizza",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
@@ -232,7 +290,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb3",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb3"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -240,7 +300,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb5",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb5"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -248,7 +310,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb6",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb6"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -256,7 +320,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36eeb8",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb8"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -264,7 +330,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee7e",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee7e"
+        },
         "name": "Fish Parmentier",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-5-370x247.jpg",
@@ -272,7 +340,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8b",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee8b"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -280,7 +350,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8f",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee8f"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -288,7 +360,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee91",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee91"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -296,7 +370,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee97",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee97"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -304,7 +380,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36eea0",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea0"
+        },
         "name": "Roasted Pork Belly",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -312,7 +390,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea9",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eea9"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -320,7 +400,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee85",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee85"
+        },
         "name": "Tuna Niçoise",
         "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -328,7 +410,9 @@
         "price": 10.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee93",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee93"
+        },
         "name": "Tuna Niçoise",
         "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -336,7 +420,9 @@
         "price": 10.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee95",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee95"
+        },
         "name": "Chicken and Walnut Salad",
         "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
@@ -344,7 +430,9 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee9b",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee9b"
+        },
         "name": "Goats Cheese Pizza",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
@@ -352,7 +440,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb7",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb7"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -360,7 +450,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee9c",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee9c"
+        },
         "name": "Breton Fish Stew",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -368,7 +460,9 @@
         "price": 12.9
     },
     {
-        "_id": "642c155b2c4774f05c36ee9d",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee9d"
+        },
         "name": "Goats Cheese Pizza",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
@@ -376,7 +470,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeac",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeac"
+        },
         "name": "Roasted Pork Belly",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -384,7 +480,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb4",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb4"
+        },
         "name": "Haddock",
         "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
@@ -392,7 +490,9 @@
         "price": 14.7
     },
     {
-        "_id": "642c155b2c4774f05c36ee98",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee98"
+        },
         "name": "Breton Fish Stew",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -400,7 +500,9 @@
         "price": 12.9
     },
     {
-        "_id": "642c155b2c4774f05c36ee82",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee82"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -408,7 +510,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee86",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee86"
+        },
         "name": "Escalope de Veau",
         "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
@@ -416,7 +520,9 @@
         "price": 12.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee9a",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36ee9a"
+        },
         "name": "Breton Fish Stew",
         "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -424,7 +530,9 @@
         "price": 12.9
     },
     {
-        "_id": "642c155b2c4774f05c36eeab",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeab"
+        },
         "name": "Goats Cheese Pizza",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
@@ -432,7 +540,9 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeb1",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeb1"
+        },
         "name": "Fish Parmentier",
         "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
@@ -440,7 +550,9 @@
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36eead",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eead"
+        },
         "name": "Roast Duck Breast",
         "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-4-370x247.jpg",
@@ -448,11 +560,33 @@
         "price": 14.5
     },
     {
-        "_id": "642c155b2c4774f05c36eeae",
+        "_id": {
+            "$oid": "642c155b2c4774f05c36eeae"
+        },
         "name": "Tuna Niçoise",
         "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
         "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
         "category": "soup",
         "price": 10.5
+    },
+    {
+        "_id": {
+            "$oid": "65f483f95367537e8a4cb8cc"
+        },
+        "name": "Mojito",
+        "category": "drinks",
+        "price": 11.99,
+        "recipe": "Mojito cocktail which is awesome and refreshing.",
+        "image": "https://i.ibb.co/KwLzBtF/close-up-alcohol-cocktails-glasses-blue-lagoon-cocktail-decorated-with-lemon-glass-cocktail-with-whi.jpg"
+    },
+    {
+        "_id": {
+            "$oid": "65f485b95367537e8a4cb8ce"
+        },
+        "name": "Bloody mary cocktail",
+        "category": "drinks",
+        "price": 9.49,
+        "recipe": "classy cocktail.",
+        "image": "https://i.ibb.co/h8nbvn2/bloody-mary-cocktail.jpg"
     }
 ]

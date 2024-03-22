@@ -4,7 +4,8 @@ import useCart from "../../../Hooks/useCart";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useAuthContext from "../../../Hooks/useAuthContext";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import useBookings from "../../../Hooks/useBookings";
 
 
 const CheckoutForm = () => {
@@ -16,17 +17,23 @@ const CheckoutForm = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuthContext();
     const [cart, refetch] = useCart();
+    const [bookings] = useBookings();
     const navigate = useNavigate();
 
-    const totalPrice = cart.reduce((total, item) => total + item.price, 0)
+    const {paymentPage} = useParams()
+    console.log(paymentPage);
+
+    const totalOrdersPrice = cart.reduce((total, item) => total + item.price, 0)
+    const totalBookingsPrice = bookings.reduce((total, item) => total + item.price, 0)
+    console.log(totalOrdersPrice, totalBookingsPrice);
 
     useEffect(() => {
-        axiosSecure.post('/create-payment-intent', { price: totalPrice })
+        axiosSecure.post('/create-payment-intent', { price: paymentPage === 'orders-pay' ? totalOrdersPrice : totalBookingsPrice })
             .then(res => {
                 console.log(res.data.clientSecret);
                 setClientSecret(res.data.clientSecret);
             })
-    }, [axiosSecure, totalPrice])
+    }, [axiosSecure, totalOrdersPrice, totalBookingsPrice, paymentPage])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -79,13 +86,14 @@ const CheckoutForm = () => {
                 // now save the payment in the database
                 const paymentInfo = {
                     email: user.email,
-                    amount: parseFloat(totalPrice.toFixed(2)),
+                    amount: parseFloat(paymentPage === 'orders-pay' ? totalOrdersPrice.toFixed(2) : totalBookingsPrice.toFixed(2)),
                     transactionId: paymentIntent.id,
                     date: new Date(), // utc date convert use moment.js
-                    cartIds: cart.map(item => item._id),
-                    menuIds: cart.map(item => item.menuId),
+                    cartIds: paymentPage === 'orders-pay' && cart.map(item => item._id),
+                    menuIds: paymentPage === 'orders-pay' && cart.map(item => item.menuId),
+                    reservationIds: paymentPage === 'orders-pay' || bookings.map(item => item._id),
                     status: 'Pending',
-                    category: 'Food item'
+                    category: paymentPage === 'orders-pay' ? 'Food item' : 'Reservation'
                 }
                 const res = await axiosSecure.post('/payments', paymentInfo)
                 refetch();
@@ -106,6 +114,7 @@ const CheckoutForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <p className="font-bold mb-5">Total Payment: ${paymentPage === 'orders-pay' ? totalOrdersPrice.toFixed(2) : totalBookingsPrice}</p>
             <CardElement
                 options={{
                     style: {

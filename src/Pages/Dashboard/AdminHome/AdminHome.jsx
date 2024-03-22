@@ -4,6 +4,7 @@ import useAuthContext from "../../../Hooks/useAuthContext";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, PieChart, Pie, ResponsiveContainer, Legend } from 'recharts';
+import { Helmet } from "react-helmet-async";
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -29,7 +30,6 @@ const AdminHome = () => {
             return res.data
         }
     })
-    console.log(chartStats, stats);
 
     // custom shape for the bar chart
     const getPath = (x, y, width, height) => {
@@ -62,10 +62,12 @@ const AdminHome = () => {
     const pieChart = chartStats.map(data => {
         return { name: data.category, value: data.revenue }
     })
-    console.log(pieChart)
 
     return (
         <div className="bg-[#F6F6F6]">
+            <Helmet>
+                <title>MHS | Admin Home</title>
+            </Helmet>
             <div className="m-12">
                 <h2 className="text-3xl font-cinzel font-semibold">Hi, Welcome {user?.displayName ? user?.displayName : 'Back'}!</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 my-6 text-white">
