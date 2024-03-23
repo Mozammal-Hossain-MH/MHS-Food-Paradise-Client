@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import Cover from "../Shared/Cover/Cover";
-import contact from '../../assets/contact/banner.jpg'
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import Footer from "../Shared/Footer";
 import { FaRegPaperPlane } from "react-icons/fa";
@@ -31,7 +30,7 @@ const ContactUs = () => {
                 <title>MHS | CONTACT US</title>
             </Helmet>
             <Cover
-                bgImg={contact}
+                bgImg={'/banner.webp'}
                 head={'CONTACT US'}
                 body={'Would you like to try a dish?'}
                 capital={true}

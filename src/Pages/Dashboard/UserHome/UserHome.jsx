@@ -5,7 +5,6 @@ import { FaMoneyCheckAlt, FaRocket, FaTruck } from "react-icons/fa";
 import { CiShop } from "react-icons/ci";
 import { IoMdPricetags } from "react-icons/io";
 import { Helmet } from "react-helmet-async";
-import pfp from '../../../assets/others/profile.png';
 import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
@@ -79,7 +78,7 @@ const UserHome = () => {
                 <div className="flex justify-center items-center bg-[#FFEDD5] py-10">
                     <div className="space-y-5 text-center">
                         <div className="flex justify-center">
-                            <img className={`ml-3 w-20 h-20 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : pfp} />
+                            <img className={`ml-3 w-20 h-20 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : '/profile.png'} />
                         </div>
                         <h3 className="text-4xl font-cinzel">{user?.displayName}</h3>
                     </div>

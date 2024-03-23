@@ -1,8 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import useAuthContext from '../../Hooks/useAuthContext';
-import fb from '../../assets/icon/fb.png';
-import gg from '../../assets/icon/gg.png';
-import gh from '../../assets/icon/gh.png';
 import useAxiosPublic from '../../Hooks/useAxiosPublic';
 import toast from 'react-hot-toast';
 
@@ -30,9 +27,9 @@ const SocialLogin = () => {
 
     return (
         <>
-            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={fb} />
-            <img onClick={handleGoogleLogin} className='btn w-12 h-12 mr-2 rounded-full p-2' src={gg} />
-            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={gh} />
+            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={'/fb.png'} />
+            <img onClick={handleGoogleLogin} className='btn w-12 h-12 mr-2 rounded-full p-2' src={'/gg.png'} />
+            <img className='btn w-12 h-12 mr-2 rounded-full p-2' src={'/gh.png'} />
         </>
     );
 };

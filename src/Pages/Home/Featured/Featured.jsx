@@ -1,5 +1,4 @@
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-import featured from '../../../assets/home/featured.jpg';
 import './Featured.css'
 
 
@@ -16,7 +15,7 @@ const Featured = () => {
             </div>
             <div className="sm:flex justify-center items-center sm:pb-32 px-3 lg:px-32">
                 <div>
-                    <img src={featured} alt="" />
+                    <img src={'/featured.webp'} alt="" />
                 </div>
                 <div className="text-white py-10 sm:py-0 sm:ml-3 space-y-3">
                     <p>March 20, 2023</p>

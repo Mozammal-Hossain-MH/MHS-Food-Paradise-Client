@@ -2,12 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-
-import slide1 from '../../../assets/home/slide1.jpg';
-import slide2 from '../../../assets/home/slide2.jpg';
-import slide3 from '../../../assets/home/slide3.jpg';
-import slide4 from '../../../assets/home/slide4.jpg';
-import slide5 from '../../../assets/home/slide5.jpg';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 
 const FoodCategory = () => {
@@ -30,24 +24,24 @@ const FoodCategory = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src={slide1} alt="" />
+                    <img src={'/slide1.webp'} className='w-full' alt='salad' />
                     <h3 className='md:text-4xl text-center text-white -mt-12 md:-mt-20 mb-20 font-cinzel'>SALADS</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide2} alt="" />
+                    <img src={'/slide2.webp'} className='w-full' alt='pizza' />
                     <h3 className='md:text-4xl text-center text-white -mt-12 md:-mt-20 font-cinzel'>PIZZAS</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide3} alt="" />
+                    <img src={'/slide3.webp'} className='w-full' alt='soup' />
                     <h3 className='md:text-4xl text-center text-white -mt-12 md:-mt-20 font-cinzel'>SOUPS</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide4} alt="" />
-                    <h3 className='md:text-4xl text-center text-white -mt-12 md:-mt-20 font-cinzel'>DESSERTS</h3>
+                    <img src={'/slide4.webp'} className='w-full' alt='dessert' />
+                    <h3 className='text-xs sm:text-base md:text-4xl text-center text-white -mt-12 md:-mt-20 font-cinzel'>DESSERTS</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide5} alt="" />
-                    <h3 className='md:text-4xl text-center text-white -mt-12 md:-mt-20 font-cinzel'>SALADS</h3>
+                    <img src={'/slide5.webp'} className='w-full' alt='drinks' />
+                    <h3 className='md:text-4xl text-center text-white -mt-12 md:-mt-20 font-cinzel'>DRINKS</h3>
                 </SwiperSlide>
             </Swiper>
         </section>

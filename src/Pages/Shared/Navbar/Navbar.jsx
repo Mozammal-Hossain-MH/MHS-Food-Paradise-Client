@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import './Navbar.css'
 import { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
-import pfp from '../../../assets/others/profile.png';
 import { IoMdCart } from "react-icons/io";
 import Swal from "sweetalert2";
 import useCart from "../../../Hooks/useCart";
@@ -79,10 +78,10 @@ const Navbar = () => {
                     <button onClick={handleLogout} className={'font-bold px-3 py-1 rounded hover:bg-black hover:bg-opacity-50 active:bg-black active:scale-95'}>Logout</button>
                 </li>
                 <li className="hidden sm:flex">
-                    <img onClick={() => document.getElementById('my_modal_2').showModal()} className={`ml-3 w-7 h-7 p-0 rounded-full pfp-shadow`} src={user?.photoURL ? user.photoURL : pfp} />
+                    <img onClick={() => document.getElementById('my_modal_2').showModal()} className={`ml-3 w-7 h-7 p-0 rounded-full pfp-shadow`} src={user?.photoURL ? user.photoURL : '/profile.png'} />
                 </li>
                 <li className="sm:hidden flex">
-                    <img className={`ml-3 w-7 h-7 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : pfp} />
+                    <img className={`ml-3 w-7 h-7 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : '/profile.png'} />
                 </li>
             </>
                 : <>
@@ -122,7 +121,7 @@ const Navbar = () => {
                 <div className="modal-box w-96 text-center fixed right-5 top-20 bg-[#bfbbc6]">
                     <h3 className="text-xs font-bold">{user?.email}</h3>
                     <div className="flex justify-center my-5">
-                        <img className={`ml-3 w-16 h-16 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : pfp} />
+                        <img className={`ml-3 w-16 h-16 p-0 rounded-full`} src={user?.photoURL ? user.photoURL : '/profile.png'} />
                     </div>
                     <p className="font-bold">Hi {user?.displayName}!</p>
                     <p className="text-sm">Welcome to MHS Restaurants! {"We're"} delighted to have you join us on a culinary journey filled with flavors, ambiance, and unforgettable experiences. Whether {"you're"} seeking a cozy spot for a romantic dinner, a vibrant setting for a family celebration, or simply craving delicious food crafted with passion and expertise, MHS Restaurants is here to cater to your every need.</p>

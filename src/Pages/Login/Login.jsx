@@ -1,5 +1,4 @@
 import './Login.css'
-import loginImg from '../../assets/others/authentication2.png';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
@@ -63,7 +62,7 @@ const Login = () => {
         <div className="loginbg py-28">
             <div className='max-w-screen-xl mx-auto p-10 md:p-20 md:flex justify-around items-center shadow-large'>
                 <div className='flex md:block mb-8 justify-center w-full'>
-                    <img src={loginImg} />
+                    <img src={'/authentication2.webp'} />
                 </div>
                 <div className='w-full px-5'>
                     <form onSubmit={handleLogin}>

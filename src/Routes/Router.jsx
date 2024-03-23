@@ -113,7 +113,7 @@ const router = createBrowserRouter([
       {
         path: 'update-item/:id',
         element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+        loader: ({ params }) => fetch(`https://mhs-food-paradise-server.vercel.app/menu/${params.id}`)
       },
       {
         path: 'manage-bookings',

@@ -1,6 +1,5 @@
 import Cover from "../../Shared/Cover/Cover";
 import Footer from "../../Shared/Footer";
-import shopImg from '../../../assets/shop/banner2.jpg';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Items from "../../Shared/Items/Items";
@@ -30,7 +29,7 @@ const Shop = () => {
                 <title>MHS | SHOP</title>
             </Helmet>
             <Cover
-                bgImg={shopImg}
+                bgImg={'/banner2.webp'}
                 head={'our shop'}
                 body={'Would you like to try a dish?'}
                 capital={true}
