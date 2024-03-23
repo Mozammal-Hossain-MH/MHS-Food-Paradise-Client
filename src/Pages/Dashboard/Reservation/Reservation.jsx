@@ -19,7 +19,7 @@ const Reservation = () => {
 
     const onSubmit = async(data) => {
         const guests = parseFloat(data.person);
-        
+        console.log(data);
         const bookings = {
             date: data.date,
             time: data.time,

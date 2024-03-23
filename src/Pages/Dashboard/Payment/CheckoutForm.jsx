@@ -6,6 +6,7 @@ import useAuthContext from "../../../Hooks/useAuthContext";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
 import useBookings from "../../../Hooks/useBookings";
+import moment from "moment";
 
 
 const CheckoutForm = () => {
@@ -21,7 +22,7 @@ const CheckoutForm = () => {
     const navigate = useNavigate();
     console.log(bookings);
 
-    const {paymentPage} = useParams()
+    const { paymentPage } = useParams()
 
     const totalOrdersPrice = cart.reduce((total, item) => total + item.price, 0)
     const totalBookingsPrice = bookings.reduce((total, item) => total + item.price, 0)
@@ -33,6 +34,7 @@ const CheckoutForm = () => {
                 setClientSecret(res.data.clientSecret);
             })
     }, [axiosSecure, totalOrdersPrice, totalBookingsPrice, paymentPage])
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -82,12 +84,14 @@ const CheckoutForm = () => {
                 console.log('transaction id:', paymentIntent.id)
                 setTransactionId(`Your transaction id: ${paymentIntent.id}`);
 
+
                 // now save the payment in the database
                 const paymentInfo = {
                     email: user.email,
                     amount: parseFloat(paymentPage === 'orders-pay' ? totalOrdersPrice.toFixed(2) : totalBookingsPrice.toFixed(2)),
                     transactionId: paymentIntent.id,
-                    date: new Date(), // utc date convert use moment.js
+                    date: moment().format('L'),
+                    time: moment().format('LT'),
                     cartIds: paymentPage === 'orders-pay' && cart.map(item => item._id),
                     menuIds: paymentPage === 'orders-pay' && cart.map(item => item.menuId),
                     reservationIds: paymentPage === 'orders-pay' || bookings.map(item => item._id),
@@ -98,15 +102,15 @@ const CheckoutForm = () => {
                 console.log(paymentInfo);
                 const res = await axiosSecure.post('/payments', paymentInfo)
                 refetch();
-                if(res.data?.paymentResult?.insertedId){
+                if (res.data?.paymentResult?.insertedId) {
                     Swal.fire({
                         position: "center",
                         icon: "success",
                         title: "Payment successful",
                         showConfirmButton: false,
                         timer: 1500
-                      });
-                      navigate('/dashboard/payment-history')
+                    });
+                    navigate('/dashboard/payment-history')
                 }
             }
         }

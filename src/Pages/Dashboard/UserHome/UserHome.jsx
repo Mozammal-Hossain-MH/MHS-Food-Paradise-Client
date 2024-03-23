@@ -25,7 +25,7 @@ const UserHome = () => {
         }
     })
     const moneyUsed = userStats?.wastedMoney;
-    const avgItemPrice = userStats?.wastedMoney / userStats?.totalItem;
+    const avgItemPrice = parseFloat(userStats?.wastedMoney / userStats?.totalItem);
 
     const { data: review = {} } = useQuery({
         queryKey: ['reviews', user?.email],
@@ -48,28 +48,28 @@ const UserHome = () => {
                     <div className="flex justify-center items-center py-8 rounded bg-gradient-to-r from-[#BB34F5] to-[#FCDBFF]">
                         <FaMoneyCheckAlt className="w-10 h-10 mr-3" />
                         <div>
-                            <p className="text-4xl font-extrabold">${moneyUsed?.toFixed(2)}</p>
+                            <p className="text-4xl font-extrabold">${moneyUsed ? moneyUsed?.toFixed(2) : '00'}</p>
                             <p className="text-2xl">Total Wasted</p>
                         </div>
                     </div>
                     <div className="flex justify-center items-center py-8 rounded bg-gradient-to-r from-[#D3A256] to-[#FDE8C0]">
                         <FaTruck className="w-10 h-10 mr-3" />
                         <div>
-                            <p className="text-4xl font-extrabold">{userStats.totalOrder}</p>
+                            <p className="text-4xl font-extrabold">{userStats?.totalOrder ? userStats?.totalOrder : 0}</p>
                             <p className="text-2xl">Orders</p>
                         </div>
                     </div>
                     <div className="flex justify-center items-center py-8 rounded bg-gradient-to-r from-[#FE4880] to-[#FECDE9]">
                         <CiShop className="w-10 h-10 mr-3" />
                         <div>
-                            <p className="text-4xl font-extrabold">{userStats.totalItem}</p>
+                            <p className="text-4xl font-extrabold">{userStats?.totalItem ? userStats?.totalItem : 0}</p>
                             <p className="text-2xl">Items</p>
                         </div>
                     </div>
                     <div className="flex justify-center items-center py-8 rounded bg-gradient-to-r from-[#6AAEFF] to-[#B6F7FF]">
                         <IoMdPricetags className="w-10 h-10 mr-3" />
                         <div>
-                            <p className="text-4xl font-extrabold">${avgItemPrice?.toFixed(2)}</p>
+                            <p className="text-4xl font-extrabold">${avgItemPrice ? avgItemPrice?.toFixed(2) : '00'}</p>
                             <p className="text-2xl">Avg Price</p>
                         </div>
                     </div>
