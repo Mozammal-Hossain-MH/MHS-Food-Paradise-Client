@@ -82,7 +82,7 @@ const ContactUs = () => {
                         onChange={onChange}
                     />
                     <div className="flex justify-center">
-                        <button className="btn w-[180px] mt-5 bg-gradientButton text-white">Add Item <FaRegPaperPlane /></button>
+                        <button className="btn w-[180px] mt-5 bg-gradientButton text-white">Send Message <FaRegPaperPlane /></button>
                     </div>
                 </form>
             </div>

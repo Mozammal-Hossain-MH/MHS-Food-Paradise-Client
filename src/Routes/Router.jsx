@@ -23,6 +23,8 @@ import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Reservation from "../Pages/Dashboard/Reservation/Reservation";
 import MyBookings from "../Pages/Dashboard/MyBookings/MyBookings";
+import AddReview from "../Pages/Dashboard/AddReview/AddReview";
+import ManageBookings from "../Pages/Dashboard/ManageBookings/ManageBookings";
 
 
 
@@ -86,6 +88,10 @@ const router = createBrowserRouter([
         path: 'my-booking',
         element: <MyBookings></MyBookings>
       },
+      {
+        path: 'add-review',
+        element: <AddReview></AddReview>
+      },
 
       // admin routes
       {
@@ -108,6 +114,10 @@ const router = createBrowserRouter([
         path: 'update-item/:id',
         element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+      },
+      {
+        path: 'manage-bookings',
+        element: <AdminRoute><ManageBookings></ManageBookings></AdminRoute>
       }
     ]
   }

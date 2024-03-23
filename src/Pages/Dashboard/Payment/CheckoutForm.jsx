@@ -19,13 +19,12 @@ const CheckoutForm = () => {
     const [cart, refetch] = useCart();
     const [bookings] = useBookings();
     const navigate = useNavigate();
+    console.log(bookings);
 
     const {paymentPage} = useParams()
-    console.log(paymentPage);
 
     const totalOrdersPrice = cart.reduce((total, item) => total + item.price, 0)
     const totalBookingsPrice = bookings.reduce((total, item) => total + item.price, 0)
-    console.log(totalOrdersPrice, totalBookingsPrice);
 
     useEffect(() => {
         axiosSecure.post('/create-payment-intent', { price: paymentPage === 'orders-pay' ? totalOrdersPrice : totalBookingsPrice })
@@ -92,9 +91,11 @@ const CheckoutForm = () => {
                     cartIds: paymentPage === 'orders-pay' && cart.map(item => item._id),
                     menuIds: paymentPage === 'orders-pay' && cart.map(item => item.menuId),
                     reservationIds: paymentPage === 'orders-pay' || bookings.map(item => item._id),
+                    phone: paymentPage === 'orders-pay' || bookings.map(item => item.phone),
                     status: 'Pending',
                     category: paymentPage === 'orders-pay' ? 'Food item' : 'Reservation'
                 }
+                console.log(paymentInfo);
                 const res = await axiosSecure.post('/payments', paymentInfo)
                 refetch();
                 if(res.data?.paymentResult?.insertedId){
