@@ -1,3 +1,7 @@
+<h2 style="font-size: 40px; font-weight: bold;">
+  Live site link: <a href="https://mhs-food-paradise.web.app">https://mhs-food-paradise.web.app</a>
+</h2>
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
